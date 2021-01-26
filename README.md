@@ -19,7 +19,7 @@ python -m pip install -r requirements.txt
 
 ## How to Use?
 
-### Detecting number of eye blinks
+### Detecting number of eye blinks in video
 
 1. Set the following parameters in main.py:
     1. vid_path: Here the path to the video file be added. For example:
@@ -71,6 +71,7 @@ python -m pip install -r requirements.txt
         ```
 
 2. Run main.py
+3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orienatation is incorrect, press 'r' to rotate the frame> Once you see the correct orientation, ress 'q' to proceed.
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Output video file
    2.	Excel file containing the average EAR values for each frame in the video.
