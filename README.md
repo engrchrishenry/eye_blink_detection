@@ -19,13 +19,16 @@ python -m pip install -r requirements.txt
 
 ## How to Use?
 
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
+1. Set the following parameters in main.py:
+    1. vid_path: Here the path to the video file be added. For example, vid_path = ‘D:Videos/VideoX.MOV’
+    2. dat_file_path: This is path to the file to predict facial landmarks. If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then dat_file_path = "shape_predictor_68_face_landmarks.dat".
+    3. scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if scale = 0.2 then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
+    4.	pos: Keep this = 0.
+    5.	th_b: This is the threshold value for detecting blinks. If the average eye aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed. ‘analyze_ear.py’ can be used to decide this threshold value. The blinking counting is sensitive to this threshold value and a wrong threshold value will lead to wrong number of blinks.
+    6.	visualize: This is to tell the system whether to visualize the output video or not while the system is processing. Visualize = 0 for not visualizing and visualize = 1 for visualizing.
+    7.	save_output: This is to tell the system whether to save the output video, graph, and excel file or not. save_output = 0 for not saving and save_output = 1 for saving.
 
-1. Run main.py
-    - sdsdsd
+2. Run main.py
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
