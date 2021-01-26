@@ -96,9 +96,10 @@ python -m pip install -r requirements.txt
     4.	end_vid_time: This is the end time in format hh:mm:ss. This defines at what time to end processing the video. This is done so the system does not process the entire video.
     5.	scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if:
     
-       ```sh
-       scale = 0.2
-       ```
+        ```sh
+        scale = 0.2
+        ```
+       
        then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
 
 2. Run analyze_ear.py.
