@@ -41,9 +41,9 @@ python -m pip install -r requirements.txt
        then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
     4.	pos: Use
        
-       ```sh
-       pos = 0
-       ```
+        ```sh
+        pos = 0
+        ```
 
     5.	th_b: This is the threshold value for detecting blinks. If the average eye aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed. ‘analyze_ear.py’ can be used to decide this threshold value. The blinking counting is sensitive to this threshold value and a wrong threshold value will lead to wrong number of blinks.
     6.	visualize: This is to tell the system whether to visualize the output video or not while the system is processing. For visualizing:
