@@ -100,8 +100,7 @@ python -m pip install -r requirements.txt
         scale = 0.2
         ```
        
-       then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
-
+        then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
 2. Run analyze_ear.py.
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Excel file containing the average EAR values for each frame in the video.
