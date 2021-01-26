@@ -9,7 +9,6 @@ opencv
 tqdm
 matplotlib
 
-
 ## Install Dependencies
 
 ```sh
@@ -22,9 +21,7 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Chris Henry – [@YourTwitter](https://twitter.com/dbader_org) – engr.chrishenry@gmail.com
 
 [https://github.com/yourname/github-link](https://github.com/dbader/)
 
