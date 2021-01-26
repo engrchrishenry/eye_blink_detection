@@ -40,7 +40,7 @@ python -m pip install -r requirements.txt
        then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
        
     4.	pos: Use
-    
+       
        ```sh
        pos = 0
        ```
@@ -52,13 +52,12 @@ python -m pip install -r requirements.txt
     
        ```sh
        visualize = 1
-       ```       
+       ```
        For not visualizing:
     
        ```sh
        visualize = 0
        ```
-       
     7.	save_output: This is to tell the system whether to save the output video, graph, and excel file or not. save_output = 0 for not saving and save_output = 1 for saving.
 
 2. Run main.py
