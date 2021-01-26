@@ -20,7 +20,7 @@ python -m pip install -r requirements.txt
 ## How to Use?
 
 1. Run main.py
- - sdsdsd
+    - sdsdsd
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
