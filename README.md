@@ -30,6 +30,11 @@ Chris Henry – [@YourTwitter](https://twitter.com/dbader_org) – engr.chrishen
 ## Note
  - Windows Users: If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
 
+## To Do
+ - Add command-line usage.
+
+
+
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/datadog-metrics
