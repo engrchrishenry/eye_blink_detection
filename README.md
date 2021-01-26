@@ -20,7 +20,11 @@ python -m pip install -r requirements.txt
 ## How to Use?
 
 1. Set the following parameters in main.py:
-    1. vid_path: Here the path to the video file be added. For example, vid_path = ‘D:Videos/VideoX.MOV’
+    1. vid_path: Here the path to the video file be added. For example,
+```sh
+vid_path = ‘D:Videos/VideoX.MOV’
+```
+
     2. dat_file_path: This is path to the file to predict facial landmarks. If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then dat_file_path = "shape_predictor_68_face_landmarks.dat".
     3. scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if scale = 0.2 then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
     4.	pos: Keep this = 0.
