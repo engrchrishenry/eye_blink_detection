@@ -2,7 +2,7 @@
 
 This software can calculate the number of times a person blinked his/her eyes.
 
-<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/ezgif.com-video-to-gif.gif" width="500" /> <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/EAR%20Graph.png" width="400" />
+<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" /> <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="400" />
 
 ## Requirements:
 This project was tested with python 3.6 on Windows 10.
@@ -109,7 +109,7 @@ python -m pip install -r requirements.txt
    2.	An image file containing the graph of average EAR values with respect to frame number.
 4. Based on the graph generated, analyze the peaks to set the threshold value
    
-   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/EAR%20Graph.png" width="500" />
+   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
 
 ## Note
 [Windows Users] If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
@@ -119,13 +119,3 @@ Add command-line usage.
 
 ## Acknowledgment
 This code is heavily inspired from Adrian Rosebrock's amazing tutorial (https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/).
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
-
-
