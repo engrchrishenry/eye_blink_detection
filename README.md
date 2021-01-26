@@ -105,7 +105,8 @@ python -m pip install -r requirements.txt
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Excel file containing the average EAR values for each frame in the video.
    2.	An image file containing the graph of average EAR values with respect to frame number.
-4. Based on the graph generated, analyze the peaks to set the threshold value.
+4. Based on the graph generated, analyze the peaks to set the threshold value
+   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/1.png" width="200" />
    ![picture alt](https://github.com/engrchrishenry/eye_blink_detection/blob/main/1.png =250x "Title is optional")
 
 ## Note
