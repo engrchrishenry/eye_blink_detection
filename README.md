@@ -105,6 +105,8 @@ python -m pip install -r requirements.txt
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Excel file containing the average EAR values for each frame in the video.
    2.	An image file containing the graph of average EAR values with respect to frame number.
+4. Based on the graph generated, analyze the peaks to set the threshold value.
+   ![picture alt](https://github.com/engrchrishenry/eye_blink_detection/blob/main/1.png "Title is optional")
 
 ## Note
 [Windows Users] If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
