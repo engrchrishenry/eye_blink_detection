@@ -2,7 +2,7 @@
 
 This software can calculate the number of times a person blinked his/her eyes.
 
-<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" /> <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="400" />
+<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
 
 ## Requirements:
 This project was tested with python 3.6 on Windows 10.
@@ -108,7 +108,6 @@ python -m pip install -r requirements.txt
    1.	Excel file containing the average EAR values for each frame in the video.
    2.	An image file containing the graph of average EAR values with respect to frame number.
 4. Based on the graph generated, analyze the peaks to set the threshold value
-   
    <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
 
 ## Note
