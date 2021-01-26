@@ -2,7 +2,13 @@
 
 This software can calculate the number of times a person blinked his/her eyes.
 
-![](header.png)
+## Requirements:
+python 3.7
+dlib
+opencv
+tqdm
+matplotlib
+
 
 ## Install Dependencies
 
@@ -35,13 +41,9 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 
 
-Requirements:
 
-python 3.7
-dlib
-opencv
-tqdm
-matplotlib
+
+
 
 How to use:
 1. Open main.py file.
