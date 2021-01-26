@@ -2,7 +2,7 @@
 
 This software can calculate the number of times a person blinked his/her eyes.
 
-<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/ezgif.com-video-to-gif.gif" width="500" /> <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/EAR%20Graph.png" width="350" />
+<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/ezgif.com-video-to-gif.gif" width="500" /> <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/EAR%20Graph.png" width="450" />
 
 ## Requirements:
 This project was tested with python 3.6 on Windows 10.
