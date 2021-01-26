@@ -24,7 +24,7 @@ python -m pip install -r requirements.txt
 ### Detecting number of eye blinks in video
 
 1. Set the following parameters in main.py:
-    1. vid_path: Here the path to the video file be added. For example:
+    1. vid_path: Add path to the video file. For example:
     
        ```sh
        vid_path = ‘D:Videos/VideoX.MOV’
