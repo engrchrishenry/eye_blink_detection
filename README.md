@@ -23,20 +23,17 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
-Chris Henry – [@YourTwitter](https://twitter.com/dbader_org) – engr.chrishenry@gmail.com
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+Chris Henry – engr.chrishenry@gmail.com
 
 
 ## Note
- - Windows Users: If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
+[Windows Users] If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
 
 ## To Do
- - Add command-line usage.
+Add command-line usage.
 
 ## Acknowledgment
- - This code is heavily inspired from https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/
-
+This code is heavily inspired from Adrian Rosebrock's amazing tutorial (https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/).
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
