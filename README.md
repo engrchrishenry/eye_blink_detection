@@ -8,6 +8,8 @@ This project was tested on python 3.6 and Windows 10.
  - opencv
  - tqdm
  - matplotlib
+ - imutils
+ - scipy
 
 ## Install Dependencies
 
@@ -32,6 +34,8 @@ Chris Henry – [@YourTwitter](https://twitter.com/dbader_org) – engr.chrishen
 ## To Do
  - Add command-line usage.
 
+## Acknowledgment
+ - This code is heavily inspired from https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/
 
 
 <!-- Markdown link & img dfn's -->
