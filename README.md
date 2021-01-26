@@ -51,7 +51,7 @@ python -m pip install -r requirements.txt
         ```sh
         visualize = 1
         ```
-       For not visualizing:
+        For not visualizing:
        
         ```sh
         visualize = 0
