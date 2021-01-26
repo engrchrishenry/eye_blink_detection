@@ -7,7 +7,7 @@ This software can calculate the number of times a person blinked his/her eyes.
 ## Requirements:
 This project was tested with python 3.6 on Windows 10.
  - dlib
- - opencv
+ - opencv-python
  - tqdm
  - matplotlib
  - imutils
