@@ -1,6 +1,6 @@
 # Eye Blink Calculator using OpenCV Python
 
-This software can calculate the number of times a person blinked his/her eyes.
+This software can calculate the number of times a person blinked his/her eyes. It uses facial landmarks and analyzes the eye aspect ratio (EAR). In addition, it also provides an option to select the threshold values of detecting blink since most people have different EAR values.
 
 <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
 
