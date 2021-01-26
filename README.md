@@ -3,7 +3,7 @@
 This software can calculate the number of times a person blinked his/her eyes.
 
 ## Requirements:
-This project was tested on python 3.6 and Windows 10.
+This project was tested with python 3.6 on Windows 10.
  - dlib
  - opencv
  - tqdm
@@ -17,7 +17,10 @@ This project was tested on python 3.6 and Windows 10.
 python -m pip install -r requirements.txt
 ```
 
-## Usage example
+## How to Use?
+
+1. Run main.py
+ - sdsdsd
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
