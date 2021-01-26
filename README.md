@@ -2,6 +2,8 @@
 
 This software can calculate the number of times a person blinked his/her eyes.
 
+<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/ezgif.com-video-to-gif.gif" width="500" />
+
 ## Requirements:
 This project was tested with python 3.6 on Windows 10.
  - dlib
@@ -107,7 +109,7 @@ python -m pip install -r requirements.txt
    2.	An image file containing the graph of average EAR values with respect to frame number.
 4. Based on the graph generated, analyze the peaks to set the threshold value
    
-   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/1.png" width="500" />
+   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/EAR%20Graph.png" width="500" />
 
 ## Note
 [Windows Users] If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
