@@ -27,13 +27,17 @@ python -m pip install -r requirements.txt
        ```
     
     2. dat_file_path: This is path to the file to predict facial landmarks. If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
+    
        ```sh
        dat_file_path = "shape_predictor_68_face_landmarks.dat"
        ```
+       
     3. scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if:
+    
        ```sh
        scale = 0.2
        ```    
+       
      then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
     4.	pos: Keep this = 0.
     5.	th_b: This is the threshold value for detecting blinks. If the average eye aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed. ‘analyze_ear.py’ can be used to decide this threshold value. The blinking counting is sensitive to this threshold value and a wrong threshold value will lead to wrong number of blinks.
