@@ -57,7 +57,16 @@ python -m pip install -r requirements.txt
         visualize = 0
         ```
        
-    7.	save_output: This is to tell the system whether to save the output video, graph, and excel file or not. save_output = 0 for not saving and save_output = 1 for saving.
+    7.	save_output: This is to tell the system whether to save the output video, graph, and excel file or not. For saving:
+        
+        ```sh
+        save_output = 1
+        ```
+        For not saving:
+       
+        ```sh
+        save_output = 0
+        ```
 
 2. Run main.py
 
