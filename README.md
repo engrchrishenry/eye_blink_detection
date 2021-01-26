@@ -19,7 +19,7 @@ python -m pip install -r requirements.txt
 
 ## How to Use?
 
-###### Detecting number of eye blinks
+### Detecting number of eye blinks
 
 1. Set the following parameters in main.py:
     1. vid_path: Here the path to the video file be added. For example:
@@ -76,7 +76,7 @@ python -m pip install -r requirements.txt
    2.	Excel file containing the average EAR values for each frame in the video.
    3.	An image file containing the graph of average EAR values with respect to frame number.
 
-###### Detecting number of eye blinks
+### Detecting number of eye blinks
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
