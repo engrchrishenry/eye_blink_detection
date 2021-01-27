@@ -104,10 +104,11 @@ python -m pip install -r requirements.txt
        
         then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
 2. Run analyze_ear.py.
-3. The output after running main.py will be (provided that save_output = 1):
+3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orientation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
+4. The output after running main.py will be (provided that save_output = 1):
    1.	Excel file containing the average EAR values for each frame in the video.
    2.	An image file containing the graph of average EAR values with respect to frame number.
-4. Based on the graph generated, analyze the peaks to set the threshold value.
+5. Based on the graph generated, analyze the peaks to set the threshold value.
    <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
 
 ## Note
