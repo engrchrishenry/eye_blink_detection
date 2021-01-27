@@ -1,6 +1,6 @@
 # Eye Blink Counter using OpenCV Python and Dlib
 
-This software can calculate the number of times a person blinked his/her eyes. It uses facial landmarks and analyzes the eye aspect ratio (EAR). In addition, since most people have different EAR values, this project also provides an option to select the threshold value required for detecting eye blinks.
+This software can count the number of times a person blinked his/her eyes. It uses facial landmarks and analyzes the eye aspect ratio (EAR). In addition, since most people have different EAR values, this project also provides an option to select the threshold value required for detecting eye blinks.
 
 <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
 
@@ -73,7 +73,7 @@ python -m pip install -r requirements.txt
         ```
 
 2. Run main.py
-3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orienatation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
+3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orientation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Output video file
    2.	Excel file containing the average EAR values for each frame in the video.
