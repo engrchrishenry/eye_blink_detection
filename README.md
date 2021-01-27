@@ -33,7 +33,7 @@ python -m pip install -r requirements.txt
     2. dat_file_path: This is path to the file to predict facial landmarks. It can be downloaded from (https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2). If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
     
        ```sh
-       dat_file_path = "shape_predictor_68_face_landmarks.dat"
+       dat_file_path = 'shape_predictor_68_face_landmarks.dat'
        ```
        
     3. scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if:
@@ -85,13 +85,13 @@ python -m pip install -r requirements.txt
     1. vid_path: Here the path to the video file be added. For example:
     
        ```sh
-       vid_path = ‘D:Videos/VideoX.MOV’
+       vid_path = 'D:Videos/VideoX.MOV'
        ```
     
     2. dat_file_path: This is path to the file to predict facial landmarks. It can be downloaded from (https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2). If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
     
        ```sh
-       dat_file_path = "shape_predictor_68_face_landmarks.dat"
+       dat_file_path = 'shape_predictor_68_face_landmarks.dat'
        ```
        
     3.	start_vid_time: This is the start time in format hh:mm:ss. This defines from what time to start processing the video. This is done so the system does not process the entire video.
