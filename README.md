@@ -27,7 +27,7 @@ python -m pip install -r requirements.txt
     1. vid_path: Add path to the video file. For example:
     
        ```sh
-       vid_path = ‘D:Videos/VideoX.MOV’
+       vid_path = 'D:Videos/VideoX.MOV'
        ```
     
     2. dat_file_path: This is path to the file to predict facial landmarks. It can be downloaded from (https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2). If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
