@@ -5,7 +5,7 @@ This software can count the number of times a person blinked his/her eyes. It us
 <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
 
 ## Requirements:
-This project was tested with python 3.6 on Windows 10.
+This project was tested with python 3.10 on Linux.
  - dlib
  - opencv-python
  - tqdm
@@ -13,66 +13,52 @@ This project was tested with python 3.6 on Windows 10.
  - imutils
  - scipy
 
-## Install Dependencies
+## Installation
 
-```sh
-python -m pip install -r requirements.txt
+- Clone this repository
+   ```bash
+   git clone https://github.com/engrchrishenry/eye_blink_detection.git
+   cd eye_blink_detection
+   ```
+- Create conda environment
+   ```bash
+   conda create --name eye python=3.10
+   conda activate eye
+   ```
+- Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Demo
+Download [shape_predictor_68_face_landmarks.dat](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) in parent directory.
+
+Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to detect the number of eye blink in a video.
+```bash
+python main.py --video "path_to_video"
 ```
 
-## How to Use?
+### Parameters
+```
+usage: main.py [-h] --video VIDEO [--dat DAT] [--scale SCALE] [--th_b TH_B] [--visualize VISUALIZE] [--save SAVE] [--pos POS]
 
-### Detecting number of eye blinks in video
+Eye Blink Detection using OpenCV and dlib
 
-1. Set the following parameters in main.py:
-    1. vid_path: Add path to the video file. For example:
-    
-       ```sh
-       vid_path = 'D:Videos/VideoX.MOV'
-       ```
-    
-    2. dat_file_path: This is path to the file to predict facial landmarks. It can be downloaded from (https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2). If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
-    
-       ```sh
-       dat_file_path = 'shape_predictor_68_face_landmarks.dat'
-       ```
-       
-    3. scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if:
-    
-       ```sh
-       scale = 0.2
-       ```
-       
-       then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
-    4.	pos: Use
-       
-        ```sh
-        pos = 0
-        ```
+options:
+  -h, --help            show this help message and exit
+  --video VIDEO         Path to video file.
+  --dat DAT             Path to dlib shape predictor .dat file.
+  --scale SCALE         Video resize scale (0.1-1.0) for faster video processing. scale: 0.5 -> resizes video to 50% of the
+                        original size.
+  --th_b TH_B           Threshold for detecting eye blink. This is the threshold value for detecting blinks. If the average eye
+                        aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed.
+                        ‘analyze_ear.py’ can be used to decide this threshold value.
+  --visualize VISUALIZE
+                        Visualize output: 1 = Yes, 0 = No.
+  --save SAVE           Save output: 1 = Yes, 0 = No.
+  --pos POS             Starting frame position.
+```
 
-    5.	th_b (see 'How to set threshold for detecting eye blinks'): This is the threshold value for detecting blinks. If the average eye aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed. ‘analyze_ear.py’ can be used to decide this threshold value. The blinking counting is sensitive to this threshold value and a wrong threshold value will lead to wrong number of blinks.
-    6.	visualize: This is to tell the system whether to visualize the output video or not while the system is processing. For visualizing:
-    
-        ```sh
-        visualize = 1
-        ```
-        For not visualizing:
-       
-        ```sh
-        visualize = 0
-        ```
-       
-    7.	save_output: This is to tell the system whether to save the output video, graph, and excel file or not. For saving:
-        
-        ```sh
-        save_output = 1
-        ```
-        For not saving:
-       
-        ```sh
-        save_output = 0
-        ```
-
-2. Run main.py
 3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orientation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
 3. The output after running main.py will be (provided that save_output = 1):
    1.	Output video file
@@ -111,11 +97,8 @@ python -m pip install -r requirements.txt
 5. Based on the graph generated, analyze the peaks to set the threshold value.
    <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
 
-## Note
-[Windows Users] If dlib fails to install via pip, then download .whl file from https://pypi.org/simple/dlib/ and install manually.
-
-## To Do
-Add command-line usage.
 
 ## Acknowledgment
-This code is heavily inspired from Adrian Rosebrock's amazing tutorial (https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/).
+This code is inspired from Adrian Rosebrock's amazing tutorial:
+
+https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
