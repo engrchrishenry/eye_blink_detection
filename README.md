@@ -31,7 +31,7 @@ This project was tested with python 3.10 on Linux.
    ```
 
 ## Demo
-Download [shape_predictor_68_face_landmarks.dat](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) in parent directory.
+[Click Here](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) to download shape_predictor_68_face_landmarks.dat.  in parent directory.
 
 Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to detect the number of eye blink in a video.
 ```bash
