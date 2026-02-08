@@ -2,7 +2,9 @@
 
 This software can count the number of times a person blinked his/her eyes. It uses facial landmarks and analyzes the eye aspect ratio (EAR). In addition, since most people have different EAR values, this project also provides an option to select the threshold value required for detecting eye blinks.
 
-<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
+<div align="center">
+ <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
+</div>
 
 ## Requirements:
 This project was tested with python 3.10 on Linux.
@@ -100,7 +102,10 @@ See results in 'ear_analysis_<video_name>' folder (if save = 1). 'ear_analysis_<
 - An image file containing the graph of average EAR values with respect to frame number.
 
 Based on the graph generated, analyze the peaks to set the threshold value.
-<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
+
+<div align="center">
+   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
+</div>
 
 ## Acknowledgment
 This code is inspired from Adrian Rosebrock's amazing tutorial:
