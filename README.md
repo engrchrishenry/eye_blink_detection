@@ -42,6 +42,14 @@ Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/ma
 python main.py --video "path_to_video"
 ```
 
+After running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up to check the orientation of the video file. If the video orientation is incorrect, press 'r' to rotate the frame until orientation is fixed. Once orientation if fixed, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
+
+See results in 'results_<video_name>' folder (if save = 1). 'results_<video_name>' will contain:
+- Output video file
+- Excel file containing the average EAR values for each frame in the video.
+- An image file containing the graph of average EAR values with respect to frame number.
+- A CSV file containg information such as blink count and blink frequency.
+
 #### Parameters
 ```
 usage: main.py [-h] --video VIDEO [--dat DAT] [--scale SCALE] [--th_b TH_B] [--visualize VISUALIZE] [--save SAVE] [--pos POS]
@@ -63,19 +71,24 @@ options:
   --pos POS             Starting frame position.
 ```
 
-After running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up to check the orientation of the video file. If the video orientation is incorrect, press 'r' to rotate the frame until orientation is fixed. Once orientation if fixed, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
-
-See results in 'results_<video_name>' folder (if save = 1). 'results_<video_name>' will contain:
-- Output video file
-- Excel file containing the average EAR values for each frame in the video.
-- An image file containing the graph of average EAR values with respect to frame number.
-- A CSV file containg information such as blink count and blink frequency.
 
 ## Optimal threshold for detecting eye blinks
 Run [analyze_ear.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/analyze_ear.py) to find the optimal threshold for detecting eye blinks.
 ```bash
 python analyze_ear.py --video "path_to_video"
 ```
+
+Similar to running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up for checking video orientation.
+
+See results in 'ear_analysis_<video_name>' folder (if save = 1). 'ear_analysis_<video_name>' will contain:
+- Excel file containing the average EAR values for each frame in the video.
+- An image file containing the graph of average EAR values with respect to frame number.
+
+Based on the graph generated, analyze the peaks to set the threshold value.
+
+<div align="center">
+   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
+</div>
 
 #### Parameters
 ```
@@ -96,18 +109,6 @@ options:
                         processing. scale: 0.5 -> resizes video to 50% of the
                         original size.
 ```
-
-Similar to running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up for checking video orientation.
-
-See results in 'ear_analysis_<video_name>' folder (if save = 1). 'ear_analysis_<video_name>' will contain:
-- Excel file containing the average EAR values for each frame in the video.
-- An image file containing the graph of average EAR values with respect to frame number.
-
-Based on the graph generated, analyze the peaks to set the threshold value.
-
-<div align="center">
-   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
-</div>
 
 ## Acknowledgment
 This code is inspired from Adrian Rosebrock's amazing tutorial:
