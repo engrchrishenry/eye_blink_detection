@@ -1,6 +1,8 @@
 # Eye Blink Counter using OpenCV Python and Dlib
 
-This software can count the number of times a person blinked his/her eyes. It uses facial landmarks and analyzes the eye aspect ratio (EAR). In addition, since most people have different EAR values, this project also provides an option to select the threshold value required for detecting eye blinks.
+This project implements **eye blink detection** by analyzing **Eye Aspect Ratio (EAR)** over time using OpenCV and dlib facial landmarks. It counts the number of times a person blinked in a given video.
+
+Instead of relying on complex neural networks, this method uses simple geometric properties of eye landmarks. The EAR remains relatively stable when the eye is open and sharply drops during a blink, making it an effective measure for blink detection. The Eye Aspect Ratio (EAR) is computed using distances between eye landmarks. Since most people have different EAR values, this project also provides a script to help in selection of optimal threshold value required for detecting eye blinks.
 
 <div align="center">
  <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="500" />
@@ -70,7 +72,7 @@ See results in 'results_<video_name>' folder (if save = 1). 'results_<video_name
 - A CSV file containg information such as blink count and blink frequency.
 
 ## Optimal threshold for detecting eye blinks
-Run [analyze_ear.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to find the optimal threshold for detecting eye blinks.
+Run [analyze_ear.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/analyze_ear.py) to find the optimal threshold for detecting eye blinks.
 ```bash
 python analyze_ear.py --video "path_to_video"
 ```
