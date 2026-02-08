@@ -10,12 +10,12 @@ import argparse
 # -----------------------
 # Argument parser
 # -----------------------
-parser = argparse.ArgumentParser(description="Eye Blink Detection using dlib")
+parser = argparse.ArgumentParser(description="Eye Blink Detection using OpenCV and dlib")
 parser.add_argument('--video', type=str, required=True, help='Path to video file.')
 parser.add_argument('--dat', type=str, default="shape_predictor_68_face_landmarks.dat",
                     help='Path to dlib shape predictor .dat file.')
-parser.add_argument('--scale', type=float, default=1.0, help='Video resize scale (0.1-1.0).')
-parser.add_argument('--th_b', type=float, default=0.28, help='Threshold for detecting eye blink.')
+parser.add_argument('--scale', type=float, default=1.0, help='Video resize scale (0.1-1.0) for faster video processing. scale: 0.5 -> resizes video to 50%% of the original size.')
+parser.add_argument('--th_b', type=float, default=0.28, help='Threshold for detecting eye blink. This is the threshold value for detecting blinks. If the average eye aspect ratio (EAR) is less than or equal to th_b, then the system thinks that the eyes are closed. ‘analyze_ear.py’ can be used to decide this threshold value.')
 parser.add_argument('--visualize', type=int, default=1, help='Visualize output: 1 = Yes, 0 = No.')
 parser.add_argument('--save', type=int, default=1, help='Save output: 1 = Yes, 0 = No.')
 parser.add_argument('--pos', type=int, default=0, help='Starting frame position.')
