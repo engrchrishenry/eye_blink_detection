@@ -31,14 +31,14 @@ This project was tested with python 3.10 on Linux.
    ```
 
 ## Demo
-[Click Here](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) to download shape_predictor_68_face_landmarks.dat.  in parent directory.
+Download the [shape_predictor_68_face_landmarks.dat.bz2](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) file and extract it get the 'shape_predictor_68_face_landmarks.dat'. Place the .dat file in the parent directory.
 
 Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to detect the number of eye blink in a video.
 ```bash
 python main.py --video "path_to_video"
 ```
 
-### Parameters
+#### Parameters
 ```
 usage: main.py [-h] --video VIDEO [--dat DAT] [--scale SCALE] [--th_b TH_B] [--visualize VISUALIZE] [--save SAVE] [--pos POS]
 
@@ -59,44 +59,48 @@ options:
   --pos POS             Starting frame position.
 ```
 
-3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orientation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
-3. The output after running main.py will be (provided that save_output = 1):
-   1.	Output video file
-   2.	Excel file containing the average EAR values for each frame in the video.
-   3.	An image file containing the graph of average EAR values with respect to frame number.
+After running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up to check the orientation of the video file. If the video orientation is incorrect, press 'r' to rotate the frame until orientation is fixed. Once orientation if fixed, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
 
-### How to set threshold for detecting eye blinks
+See results in 'results_<video_name>' folder (if save = 1). 'results_<video_name>' will contain:
+- Output video file
+- Excel file containing the average EAR values for each frame in the video.
+- An image file containing the graph of average EAR values with respect to frame number.
+- A CSV file containg information such as blink count and blink frequency.
 
-1. Set the following parameters in analyze_ear.py:
-    1. vid_path: Here the path to the video file be added. For example:
-    
-       ```sh
-       vid_path = 'D:Videos/VideoX.MOV'
-       ```
-    
-    2. dat_file_path: This is path to the file to predict facial landmarks. It can be downloaded from (https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2). If "shape_predictor_68_face_landmarks.dat" file is in the folder where ‘main.py’ is located, then:
-    
-       ```sh
-       dat_file_path = 'shape_predictor_68_face_landmarks.dat'
-       ```
-       
-    3.	start_vid_time: This is the start time in format hh:mm:ss. This defines from what time to start processing the video. This is done so the system does not process the entire video.
-    4.	end_vid_time: This is the end time in format hh:mm:ss. This defines at what time to end processing the video. This is done so the system does not process the entire video.
-    5.	scale: This is the number (from 0.1 to 1.0) to decrease the resolution of video for faster processing. For example, if:
-    
-        ```sh
-        scale = 0.2
-        ```
-       
-        then the software will resize the video to 20% resolution of the original video. For a full HD video, scale = 0.2 or scale = 0.3 is fine. The smaller the value of scale, the faster the system will work and the larger the value of scale the slower the system will work.
-2. Run analyze_ear.py.
-3. A window will pop up to check the orientation of the video file. Due to certain bug in OpenCV Python, sometimes the loaded frames from video have incorrect orientation. If the orientation is incorrect, press 'r' to rotate the frame. Once you see the correct orientation, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
-4. The output after running main.py will be (provided that save_output = 1):
-   1.	Excel file containing the average EAR values for each frame in the video.
-   2.	An image file containing the graph of average EAR values with respect to frame number.
-5. Based on the graph generated, analyze the peaks to set the threshold value.
-   <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
+## Optimal threshold for detecting eye blinks
+Run [analyze_ear.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to find the optimal threshold for detecting eye blinks.
+```bash
+python analyze_ear.py --video "path_to_video"
+```
 
+#### Parameters
+```
+usage: analyze_ear.py [-h] --video VIDEO [--dat DAT] [--start_time START_TIME]
+                      [--end_time END_TIME] [--scale SCALE]
+
+Compute Eye Aspect Ratio (EAR) from a video using dlib facial landmarks
+
+options:
+  -h, --help            show this help message and exit
+  --video VIDEO         Path to input video file
+  --dat DAT             Path to dlib shape predictor .dat file.
+  --start_time START_TIME
+                        Start time (hh:mm:ss) [default: 00:00:00]
+  --end_time END_TIME   End time (hh:mm:ss). If not provided, process till end
+                        of video
+  --scale SCALE         Video resize scale (0.1-1.0) for faster video
+                        processing. scale: 0.5 -> resizes video to 50% of the
+                        original size.
+```
+
+Similar to running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up for checking video orientation.
+
+See results in 'ear_analysis_<video_name>' folder (if save = 1). 'ear_analysis_<video_name>' will contain:
+- Excel file containing the average EAR values for each frame in the video.
+- An image file containing the graph of average EAR values with respect to frame number.
+
+Based on the graph generated, analyze the peaks to set the threshold value.
+<img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/EAR%20Graph.png" width="500" />
 
 ## Acknowledgment
 This code is inspired from Adrian Rosebrock's amazing tutorial:
