@@ -5,7 +5,7 @@ This project implements **eye blink detection** by analyzing **Eye Aspect Ratio 
 Instead of relying on complex neural networks, this method uses simple geometric properties of eye landmarks. The EAR remains relatively stable when the eye is open and sharply drops during a blink, making it an effective measure for blink detection. The Eye Aspect Ratio (EAR) is computed using distances between eye landmarks. Since most people have different EAR values, this project also provides a script to help in selection of optimal threshold value required for detecting eye blinks.
 
 <div align="center">
- <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="550" />
+ <img src="https://github.com/engrchrishenry/eye_blink_detection/blob/main/images/gif.gif" width="599" />
 </div>
 
 ## Requirements:
