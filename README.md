@@ -37,9 +37,9 @@ This project was tested with python 3.10 on Linux.
 ## Demo
 Download the [shape_predictor_68_face_landmarks.dat.bz2](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) file and extract it get the 'shape_predictor_68_face_landmarks.dat'. Place the .dat file in the parent directory.
 
-Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to detect the number of eye blink in a video.
+Run [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py) to detect eye blinks in the provided [sample_video.mp4](https://github.com/engrchrishenry/eye_blink_detection/blob/main/sample_video.mp4). Replace --video argument with the video path for processing a different video file.
 ```bash
-python main.py --video "path_to_video"
+python main.py --video "sample_video.mp4"
 ```
 
 After running [main.py](https://github.com/engrchrishenry/eye_blink_detection/blob/main/main.py), a window will pop up to check the orientation of the video file. If the video orientation is incorrect, press 'r' to rotate the frame until orientation is fixed. Once orientation if fixed, press 'q' to proceed. If orientation is already correct, directly press 'q' to skip this step.
